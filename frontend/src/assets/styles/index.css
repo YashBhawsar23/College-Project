@@ -1,0 +1,224 @@
+@media screen and (max-width: 768px) {
+  .border-bottom {
+    border-bottom: 2px solid #000 !important;
+  }
+
+  .display-4 {
+    margin-top: 1.5rem;
+  }
+
+  .m2 {
+    margin-top: 2rem;
+    margin-left: 2rem;
+    color: #000;
+  }
+}
+
+main {
+  min-height: 80vh;
+}
+
+.rating span {
+  margin: 0.1rem;
+}
+
+.rating svg {
+  color: #f8e825;
+}
+
+.rating-text {
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding-left: 0.5rem;
+}
+
+/* BODY */
+
+/* Home Screen Background */
+.home-bg {
+  margin-left: 0px;
+  background-color: #dbeef7; /* Your custom background color */
+}
+
+/* Search BOX  */
+.search-box {
+  width: 100%; /* Full width on smaller screens */
+}
+
+/* Search Button */
+.search-btn {
+  color: white;
+  border: 1px solid white;
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+}
+
+.search-btn:hover {
+  border: 1px solid gray;
+  background-color: #242f65; /* Change background color on hover */
+  color: white; /* Change icon color */
+}
+
+@media (min-width: 768px) {
+  .search-box {
+    width: 500px; /* Wider on desktop screens */
+  }
+}
+
+.product-title {
+  height: 2.5em; /* Set a fixed height */
+  overflow: hidden; /* Hide overflow content */
+  text-overflow: ellipsis; /* Add ellipsis for long text */
+  white-space: nowrap; /* Prevent wrapping */
+}
+
+table td,
+table th {
+  text-align: center;
+}
+
+.review {
+  margin-top: 30px;
+}
+
+.review h2 {
+  font-size: 24px;
+  background: #f4f4f4;
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+
+.review button {
+  margin-top: 10px;
+}
+/* Original Caption */
+/* .carousel-caption {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+} */
+
+/* In your CSS file or a <style> tag */
+/* .carousel-caption {
+  position: absolute; 
+  top: 50%; 
+  right: 15px; 
+  transform: translateY(-50%); 
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.5
+  ); /
+  padding: 10px; 
+} */
+
+/* Carousel.css */
+.carousel-caption {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.carousel-caption h2 {
+  margin: 0;
+}
+
+.info-icon {
+  font-size: 3em; /* Adjust the font-size as needed */
+  margin-bottom: 0.5rem; /* Optional: Adjust margin as needed */
+}
+
+/* Add this to your CSS file or within a <style> tag in your component file */
+
+.form-container {
+  background-color: #f8f9fa;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.form-container:hover {
+  transform: translateY(-5px);
+  opacity: 0.98;
+}
+
+.form-label {
+  color: #343a40;
+}
+
+.form-control {
+  border-radius: 5px;
+  border: 1px solid #ced4da;
+  transition: border-color 0.3s ease-in-out;
+}
+
+.form-control:focus {
+  border-color: #80bdff;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.btn-primary {
+  background-color: #242f65;
+
+  transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+.link {
+  color: #007bff;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+
+.link:hover {
+  color: #0056b3;
+}
+
+/* gbfhjgjhgbkkjkhgfdhgtfyhhhgt */
+
+.footerList {
+  /* padding: 20px 0; */
+}
+
+.bg {
+  padding-left: 1.2rem;
+  background-color: #242f65;
+}
+
+.footerList ul {
+  list-style-type: none; /* Remove default list style */
+  padding: 10px; /* Remove default padding */
+}
+
+.footerList ul li {
+  margin-bottom: 10px; /* Space between list items */
+}
+
+.footerList ul li a {
+  text-decoration: none; /* Remove underline */
+  color: #ffffff; /* White text color */
+}
+
+.footerList ul li a:hover {
+  color: gray; /* Blue text color on hover */
+}
+
+.footerList h5 {
+  font-weight: bold; /* Bold text */
+}
+
+.black {
+  background-color: black !important;
+  color: #ffffff !important;
+}
+
+.white {
+  color: #ffffff !important;
+}
