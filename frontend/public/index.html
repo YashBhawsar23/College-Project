@@ -37,13 +37,12 @@
     <div class="spinner"></div>
     <p>This app is hosted on a free service and might take a few seconds to start. Please wait.</p>
   </div>
+  <div id="root"></div>
   <script>
-    // Automatically remove this loader when React app is ready
     window.onload = () => {
       const loader = document.getElementById('loading');
-      if (loader) loader.style.display = 'none';
+      if (loader) loader.remove(); // Remove the loader completely
     };
   </script>
 </body>
 </html>
-
