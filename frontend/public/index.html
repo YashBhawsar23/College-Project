@@ -1,48 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Loading...</title>
-  <style>
-    body {
-      margin: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      background-color: #f9f9f9;
-      font-family: Arial, sans-serif;
-    }
-    #loading {
-      text-align: center;
-    }
-    .spinner {
-      margin: 20px auto;
-      border: 6px solid #f3f3f3;
-      border-top: 6px solid #3498db;
-      border-radius: 50%;
-      width: 40px;
-      height: 40px;
-      animation: spin 1s linear infinite;
-    }
-    @keyframes spin {
-      0% { transform: rotate(0deg); }
-      100% { transform: rotate(360deg); }
-    }
-  </style>
+<meta charset="utf-8" />
+<link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="theme-color" content="#000000" />
+<link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+<link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+<title>Swaggin</title>
 </head>
 <body>
-  <div id="loading">
-    <div class="spinner"></div>
-    <p>This app is hosted on a free service and might take a few seconds to start. Please wait.</p>
-  </div>
-  <div id="root"></div>
-  <script>
-    window.onload = () => {
-      const loader = document.getElementById('loading');
-      if (loader) loader.remove(); // Remove the loader completely
-    };
-  </script>
+<noscript>You need to enable JavaScript to run this app.</noscript>
+<div id="root"></div>
 </body>
 </html>
