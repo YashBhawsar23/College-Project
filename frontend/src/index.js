@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import ReactDOM from 'react-dom/client';
 import './assets/styles/bootstrap.custom.css';
 import './assets/styles/index.css';
