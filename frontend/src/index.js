@@ -4,6 +4,7 @@ import './assets/styles/bootstrap.custom.css';
 import './assets/styles/index.css';
 // import 'bootstrap/dist/css/bootstrap.min.css';
 import App from './App';
+import Preloader from './components/Preloader'; // Import Preloader
 import reportWebVitals from './reportWebVitals';
 import {
   createBrowserRouter,
@@ -71,9 +72,23 @@ const router = createBrowserRouter(
   )
 );
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
+
+
+const RootComponent = () => {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    // Simulate server waking up (adjust timeout for Render's server startup time)
+    const timer = setTimeout(() => setLoading(false), 5000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (loading) {
+    return <Preloader />;
+  }
+
+  return (
     <HelmetProvider>
       <Provider store={store}>
         <PayPalScriptProvider deferLoading={true}>
@@ -81,6 +96,13 @@ root.render(
         </PayPalScriptProvider>
       </Provider>
     </HelmetProvider>
+  );
+};
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+  <React.StrictMode>
+    <RootComponent />
   </React.StrictMode>
 );
 
