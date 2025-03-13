@@ -1,31 +1,39 @@
-// import { Card } from 'react-bootstrap';
 // import { Link } from 'react-router-dom';
 // import Rating from './Rating';
 
 // const Product = ({ product }) => {
 //   return (
-//     <Card className='my-3 p-3 rounded'>
+//     <div className='relative bg-white rounded-lg overflow-hidden shadow-md p-3'>
+//       {/* Product Image */}
 //       <Link to={`/product/${product._id}`}>
-//         <Card.Img src={product.image} variant='top' />
+//         <img
+//           src={product.image}
+//           alt={product.name}
+//           className='w-full h-[350px] object-cover rounded-md hover:opacity-90 transition'
+//         />
 //       </Link>
 
-//       <Card.Body>
+//       {/* Rating Badge (Now properly positioned) */}
+//       <div className='absolute top-2 left-2 bg-white px-2 py-1 rounded-full shadow-md text-sm font-semibold flex items-center gap-1'>
+//         <span className='text-yellow-500'>★</span> {product.rating}
+//       </div>
+
+//       {/* Product Info */}
+//       <div className='mt-3'>
 //         <Link to={`/product/${product._id}`}>
-//           <Card.Title as='div' className='product-title'>
-//             <strong>{product.name}</strong>
-//           </Card.Title>
+//           <h2 className='text-md font-semibold text-gray-800 hover:text-blue-600 transition'>
+//             {product.name}
+//           </h2>
 //         </Link>
 
-//         <Card.Text as='div'>
-//           <Rating
-//             value={product.rating}
-//             text={`${product.numReviews} reviews`}
-//           />
-//         </Card.Text>
+//         <p className='text-gray-500 text-sm mt-1'>
+//           {product.numReviews} reviews
+//         </p>
 
-//         <Card.Text as='h3'>₹{product.price}</Card.Text>
-//       </Card.Body>
-//     </Card>
+//         {/* Price */}
+//         <p className='text-xl font-bold text-gray-900 mt-2'>₹{product.price}</p>
+//       </div>
+//     </div>
 //   );
 // };
 
@@ -36,30 +44,33 @@ import Rating from './Rating';
 
 const Product = ({ product }) => {
   return (
-    <div className='bg-white shadow-md rounded-lg overflow-hidden p-4'>
+    <div className='relative bg-white rounded-lg overflow-hidden shadow-md p-3'>
+      {/* Product Image */}
       <Link to={`/product/${product._id}`}>
         <img
           src={product.image}
           alt={product.name}
-          className='w-full h-64 object-cover rounded-md hover:opacity-80 transition'
+          className='w-full h-[350px] object-cover rounded-md hover:opacity-90 transition'
         />
       </Link>
 
-      <div className='p-4'>
+      {/* Product Info */}
+      <div className='mt-3'>
         <Link to={`/product/${product._id}`}>
-          <h2 className='text-lg font-semibold hover:text-blue-600 transition'>
+          <h2 className='text-md font-semibold text-gray-800 hover:text-blue-600 transition'>
             {product.name}
           </h2>
         </Link>
 
-        <div className='mt-2'>
-          <Rating
-            value={product.rating}
-            text={`${product.numReviews} reviews`}
-          />
+        {/* Rating and Reviews in the same line */}
+        <div className='flex items-center gap-1 text-sm text-gray-600 mt-1'>
+          <span className='text-yellow-500'>★</span>
+          <span className='font-semibold'>{product.rating}</span>
+          <span>({product.numReviews} reviews)</span>
         </div>
 
-        <p className='text-xl font-bold text-gray-800 mt-2'>₹{product.price}</p>
+        {/* Price */}
+        <p className='text-xl font-bold text-gray-900 mt-2'>₹{product.price}</p>
       </div>
     </div>
   );
