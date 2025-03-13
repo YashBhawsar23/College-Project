@@ -1,17 +1,27 @@
-import { Spinner } from 'react-bootstrap';
+// import { Spinner } from 'react-bootstrap';
+
+// const Loader = () => {
+//   return (
+//     <Spinner
+//       animation='border'
+//       role='status'
+//       style={{
+//         width: '100px',
+//         height: '100px',
+//         margin: 'auto',
+//         display: 'block',
+//       }}
+//     ></Spinner>
+//   );
+// };
+
+// export default Loader;
 
 const Loader = () => {
   return (
-    <Spinner
-      animation='border'
-      role='status'
-      style={{
-        width: '100px',
-        height: '100px',
-        margin: 'auto',
-        display: 'block',
-      }}
-    ></Spinner>
+    <div className='flex justify-center items-center h-screen'>
+      <div className='w-24 h-24 border-4 border-gray-300 border-t-blue-500 rounded-full animate-spin'></div>
+    </div>
   );
 };
 
