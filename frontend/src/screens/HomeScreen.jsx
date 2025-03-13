@@ -7,6 +7,7 @@ import Paginate from '../components/Paginate';
 import Meta from '../components/Meta';
 import HeroSection from './HeroSection';
 import InfoBox from './InfoSection';
+import BlogSection from '../components/Blogs';
 
 const HomeScreen = () => {
   const { pageNumber, keyword } = useParams();
@@ -40,7 +41,12 @@ const HomeScreen = () => {
             Latest Collection
           </h1>
 
-          <div className='grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 px-4'>
+          {/* <div className='grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 px-4'>
+            {data.products.map((product) => (
+              <Product key={product._id} product={product} />
+            ))}
+          </div> */}
+          <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 px-4'>
             {data.products.map((product) => (
               <Product key={product._id} product={product} />
             ))}
@@ -51,6 +57,7 @@ const HomeScreen = () => {
             page={data.page}
             keyword={keyword || ''}
           />
+          <BlogSection />
           <InfoBox />
         </>
       )}

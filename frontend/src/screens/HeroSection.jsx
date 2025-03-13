@@ -54,7 +54,8 @@ const HeroSection = () => {
       </div>
 
       {/* Sale Notification Banner */}
-      <div className='absolute bottom-0 left-0 right-0 bg-blue-600 text-white z-20'>
+
+      <div className='absolute bottom-0 left-0 right-0 bg-black text-white z-20'>
         <div className='max-w-6xl mx-auto px-4 py-3 text-center md:text-left md:flex items-center justify-between'>
           <p className='font-medium'>Limited Time: 30% Off New Arrivals</p>
           <a
