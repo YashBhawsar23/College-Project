@@ -101,7 +101,7 @@ const Footer2 = () => {
               </a>
             </li>
             <li>
-              <a href='/' className='hover:text-gray-90000'>
+              <a href='/' className='hover:text-gray-900'>
                 Contact Us
               </a>
             </li>
@@ -111,22 +111,22 @@ const Footer2 = () => {
         <div>
           <ul className='space-y-2'>
             <li>
-              <a href='/' className='hover:text-gray-400'>
+              <a href='/' className='hover:text-gray-900'>
                 Login / Register
               </a>
             </li>
             <li>
-              <a href='/' className='hover:text-gray-400'>
+              <a href='/' className='hover:text-gray-900'>
                 Your Cart
               </a>
             </li>
             <li>
-              <a href='/' className='hover:text-gray-400'>
+              <a href='/' className='hover:text-gray-900'>
                 Wishlist Items
               </a>
             </li>
             <li>
-              <a href='/' className='hover:text-gray-400'>
+              <a href='/' className='hover:text-gray-900'>
                 Your Checkout
               </a>
             </li>
@@ -136,22 +136,22 @@ const Footer2 = () => {
         <div>
           <ul className='space-y-2'>
             <li>
-              <a href='/' className='hover:text-gray-400'>
+              <a href='/' className='hover:text-gray-900'>
                 FAQs
               </a>
             </li>
             <li>
-              <a href='/' className='hover:text-gray-400'>
+              <a href='/' className='hover:text-gray-900'>
                 Terms Of Service
               </a>
             </li>
             <li>
-              <a href='/' className='hover:text-gray-400'>
+              <a href='/' className='hover:text-gray-900'>
                 Privacy Policy
               </a>
             </li>
             <li>
-              <a href='/' className='hover:text-gray-400'>
+              <a href='/' className='hover:text-gray-900'>
                 Returns
               </a>
             </li>
@@ -166,12 +166,12 @@ const Footer2 = () => {
               </a>
             </li>
             <li>
-              <a href='/' className='hover:text-gray-400'>
+              <a href='/' className='hover:text-gray-900'>
                 40021 Vijay Nagar, Indore
               </a>
             </li>
             <li>
-              <a href='/' className='hover:text-gray-400'>
+              <a href='/' className='hover:text-gray-900'>
                 83XXXXXX92
               </a>
             </li>

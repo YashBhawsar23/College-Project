@@ -53,10 +53,10 @@ const AuthScreen = () => {
   };
 
   return (
-    <div className='flex min-h-screen w-full flex-col items-center justify-center mx-auto'>
-      <div className='w-96 rounded-2xl bg-white p-8 shadow-xl'>
+    <div className='flex min-h-screen flex-col items-center justify-center px-4'>
+      <div className='w-full max-w-md rounded-2xl bg-white p-6 md:p-8 shadow-xl'>
         {/* Tab Buttons for Switching between Sign In & Sign Up */}
-        <div className='mb-8 flex gap-4'>
+        <div className='mb-6 flex gap-4'>
           <button
             className={`flex-1 rounded-lg py-3 text-sm font-medium transition-all duration-200 ${
               isLogin
@@ -107,7 +107,7 @@ const AuthScreen = () => {
             placeholder='Password'
             value={password}
             onChange={(e) => setPassword(e.target.value)}
-            className='w-full rounded-lg border border-gray-200 p-3 text-sm outline-none transition-all duration-200 hover:border-gray-300 focus:border-gray-900  focus:ring-1 focus:ring-gray-900'
+            className='w-full rounded-lg border border-gray-200 p-3 text-sm outline-none transition-all duration-200 hover:border-gray-300 focus:border-gray-900 focus:ring-1 focus:ring-gray-900'
             required
           />
 
@@ -117,7 +117,7 @@ const AuthScreen = () => {
               placeholder='Confirm Password'
               value={confirmPassword}
               onChange={(e) => setConfirmPassword(e.target.value)}
-              className='w-full rounded-lg border border-gray-200 p-3 text-sm outline-none transition-all duration-200 hover:border-gray-300 focus:border-gray-900 focus:ring-1 focus:ring-gray-900 '
+              className='w-full rounded-lg border border-gray-200 p-3 text-sm outline-none transition-all duration-200 hover:border-gray-300 focus:border-gray-900 focus:ring-1 focus:ring-gray-900'
               required
             />
           )}
