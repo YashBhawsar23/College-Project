@@ -22,10 +22,10 @@ const App = () => {
   }, [dispatch]);
 
   return (
-    <div className='min-h-screen flex flex-col bg-gray-100'>
+    <div className='min-h-screen flex flex-col w-full'>
       <ToastContainer />
       <Header />
-      <main className='flex-grow py-6 max-w-screen-xl mx-auto px-4'>
+      <main className='flex-grow w-full'>
         <Outlet />
       </main>
       <Footer2 />
