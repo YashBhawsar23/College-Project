@@ -27,13 +27,12 @@ const Header = () => {
       await logoutApiCall().unwrap();
       dispatch(logout());
       dispatch(resetCart());
-      navigate('/login');
+      navigate('/auth'); // Redirect to new auth page
     } catch (err) {
       console.error(err);
     }
   };
 
-  // Handle click outside to close dropdowns
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (userMenuRef.current && !userMenuRef.current.contains(event.target)) {
@@ -54,7 +53,7 @@ const Header = () => {
   }, []);
 
   return (
-    <header className='bg-[#242f65] text-white shadow-md'>
+    <header className='bg-orange-50 text-black shadow-md'>
       <div className='container mx-auto flex justify-between items-center py-4 px-6'>
         <Link to='/' className='text-2xl font-bold'>
           Swaggin
@@ -75,91 +74,78 @@ const Header = () => {
           </Link>
 
           {userInfo ? (
-            <div ref={userMenuRef} className='relative group'>
+            <div ref={userMenuRef} className='relative'>
               <button
                 className='flex items-center space-x-2'
                 onClick={() => {
                   setUserMenuOpen(!userMenuOpen);
                   setAdminMenuOpen(false);
                 }}
-                onMouseEnter={() => setUserMenuOpen(true)}
               >
                 <span>{userInfo.name}</span>
                 <FaUser />
               </button>
-              <div
-                className={`absolute right-0 mt-2 w-40 bg-white text-gray-900 rounded-md shadow-lg z-10 transition-opacity duration-150 ${
-                  userMenuOpen ? 'opacity-100' : 'opacity-0 invisible'
-                }`}
-                onMouseEnter={() => setUserMenuOpen(true)}
-                onMouseLeave={() => setUserMenuOpen(false)}
-              >
-                <Link
-                  to='/profile'
-                  className='block px-4 py-2 hover:bg-gray-200'
-                  onClick={() => setUserMenuOpen(false)}
-                >
-                  Profile
-                </Link>
-                <button
-                  onClick={() => {
-                    setUserMenuOpen(false);
-                    logoutHandler();
-                  }}
-                  className='block w-full text-left px-4 py-2 hover:bg-gray-200'
-                >
-                  Logout
-                </button>
-              </div>
+              {userMenuOpen && (
+                <div className='absolute right-0 mt-2 w-40 bg-white text-gray-900 rounded-md shadow-lg z-10'>
+                  <Link
+                    to='/profile'
+                    className='block px-4 py-2 hover:bg-gray-200'
+                    onClick={() => setUserMenuOpen(false)}
+                  >
+                    Profile
+                  </Link>
+                  <button
+                    onClick={logoutHandler}
+                    className='block w-full text-left px-4 py-2 hover:bg-gray-200'
+                  >
+                    Logout
+                  </button>
+                </div>
+              )}
             </div>
           ) : (
-            <Link to='/login' className='flex items-center space-x-2'>
+            <Link to='/auth' className='flex items-center space-x-2'>
               <FaUser />
-              <span>Sign Up</span>
+              <span>Sign In</span>
             </Link>
           )}
 
           {userInfo?.isAdmin && (
-            <div ref={adminMenuRef} className='relative group'>
+            <div ref={adminMenuRef} className='relative'>
               <button
                 className='flex items-center space-x-2'
                 onClick={() => {
                   setAdminMenuOpen(!adminMenuOpen);
                   setUserMenuOpen(false);
                 }}
-                onMouseEnter={() => setAdminMenuOpen(true)}
               >
                 <span>Admin</span>
               </button>
-              <div
-                className={`absolute right-0 mt-2 w-40 bg-white text-gray-900 rounded-md shadow-lg z-10 transition-opacity duration-150 ${
-                  adminMenuOpen ? 'opacity-100' : 'opacity-0 invisible'
-                }`}
-                onMouseEnter={() => setAdminMenuOpen(true)}
-                onMouseLeave={() => setAdminMenuOpen(false)}
-              >
-                <Link
-                  to='/admin/productlist'
-                  className='block px-4 py-2 hover:bg-gray-200'
-                  onClick={() => setAdminMenuOpen(false)}
-                >
-                  Products
-                </Link>
-                <Link
-                  to='/admin/orderlist'
-                  className='block px-4 py-2 hover:bg-gray-200'
-                  onClick={() => setAdminMenuOpen(false)}
-                >
-                  Orders
-                </Link>
-                <Link
-                  to='/admin/userlist'
-                  className='block px-4 py-2 hover:bg-gray-200'
-                  onClick={() => setAdminMenuOpen(false)}
-                >
-                  Users
-                </Link>
-              </div>
+              {adminMenuOpen && (
+                <div className='absolute right-0 mt-2 w-40 bg-white text-gray-900 rounded-md shadow-lg z-10'>
+                  <Link
+                    to='/admin/productlist'
+                    className='block px-4 py-2 hover:bg-gray-200'
+                    onClick={() => setAdminMenuOpen(false)}
+                  >
+                    Products
+                  </Link>
+                  <Link
+                    to='/admin/orderlist'
+                    className='block px-4 py-2 hover:bg-gray-200'
+                    onClick={() => setAdminMenuOpen(false)}
+                  >
+                    Orders
+                  </Link>
+                  <Link
+                    to='/admin/userlist'
+                    className='block px-4 py-2 hover:bg-gray-200'
+                    onClick={() => setAdminMenuOpen(false)}
+                  >
+                    Users
+                  </Link>
+                </div>
+              )}
             </div>
           )}
         </div>
@@ -175,7 +161,7 @@ const Header = () => {
 
       {/* Mobile menu */}
       {mobileMenuOpen && (
-        <div className='md:hidden bg-[#242f65] px-6 pb-4'>
+        <div className='md:hidden bg-orange-50 px-6 pb-4'>
           <div className='flex flex-col space-y-4'>
             <SearchBox />
 
@@ -204,10 +190,7 @@ const Header = () => {
                   <span>Profile</span>
                 </Link>
                 <button
-                  onClick={() => {
-                    setMobileMenuOpen(false);
-                    logoutHandler();
-                  }}
+                  onClick={logoutHandler}
                   className='flex items-center space-x-2'
                 >
                   <span>Logout</span>
@@ -215,44 +198,42 @@ const Header = () => {
               </>
             ) : (
               <Link
-                to='/login'
+                to='/auth'
                 className='flex items-center space-x-2'
                 onClick={() => setMobileMenuOpen(false)}
               >
                 <FaUser />
-                <span>Sign Up</span>
+                <span>Sign In</span>
               </Link>
             )}
 
             {userInfo?.isAdmin && (
-              <>
-                <div className='pt-2 border-t border-gray-700'>
-                  <p className='font-semibold mb-2'>Admin</p>
-                  <div className='flex flex-col space-y-2 pl-4'>
-                    <Link
-                      to='/admin/productlist'
-                      className='block'
-                      onClick={() => setMobileMenuOpen(false)}
-                    >
-                      Products
-                    </Link>
-                    <Link
-                      to='/admin/orderlist'
-                      className='block'
-                      onClick={() => setMobileMenuOpen(false)}
-                    >
-                      Orders
-                    </Link>
-                    <Link
-                      to='/admin/userlist'
-                      className='block'
-                      onClick={() => setMobileMenuOpen(false)}
-                    >
-                      Users
-                    </Link>
-                  </div>
+              <div className='pt-2 border-t border-gray-700'>
+                <p className='font-semibold mb-2'>Admin</p>
+                <div className='flex flex-col space-y-2 pl-4'>
+                  <Link
+                    to='/admin/productlist'
+                    className='block'
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    Products
+                  </Link>
+                  <Link
+                    to='/admin/orderlist'
+                    className='block'
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    Orders
+                  </Link>
+                  <Link
+                    to='/admin/userlist'
+                    className='block'
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    Users
+                  </Link>
                 </div>
-              </>
+              </div>
             )}
           </div>
         </div>

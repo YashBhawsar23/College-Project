@@ -81,27 +81,27 @@
 
 const Footer2 = () => {
   return (
-    <div className='bg-gray-900 text-white py-8'>
+    <div className='bg-orange-50 text-black py-8'>
       <div className='max-w-6xl mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-6'>
         <div>
           <ul className='space-y-2'>
             <li>
-              <a href='/' className='hover:text-gray-400'>
+              <a href='/' className='hover:text-gray-900'>
                 About Us
               </a>
             </li>
             <li>
-              <a href='/' className='hover:text-gray-400'>
+              <a href='/' className='hover:text-gray-900'>
                 Online Store
               </a>
             </li>
             <li>
-              <a href='/' className='hover:text-gray-400'>
+              <a href='/' className='hover:text-gray-900'>
                 Blog
               </a>
             </li>
             <li>
-              <a href='/' className='hover:text-gray-400'>
+              <a href='/' className='hover:text-gray-90000'>
                 Contact Us
               </a>
             </li>
@@ -176,7 +176,7 @@ const Footer2 = () => {
               </a>
             </li>
             <li>
-              <a href='/' className='hover:text-gray-400'>
+              <a href='/' className='hover:text-gray-900'>
                 Yas@Gmail.Com
               </a>
             </li>
