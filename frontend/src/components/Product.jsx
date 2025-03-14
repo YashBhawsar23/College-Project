@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom';
-import Rating from './Rating';
 
 const Product = ({ product }) => {
   return (
@@ -16,12 +15,12 @@ const Product = ({ product }) => {
       {/* Product Info */}
       <div className='mt-3'>
         <Link to={`/product/${product._id}`}>
-          <h2 className='text-md font-semibold text-gray-800 hover:text-blue-600 transition'>
+          <h2 className='text-md font-semibold text-gray-800 hover:text-black-900 transition'>
             {product.name}
           </h2>
         </Link>
 
-        {/* Rating and Reviews in the same line */}
+        {/* Rating and Reviews  */}
         <div className='flex items-center gap-1 text-sm text-gray-600 mt-1'>
           <span className='text-yellow-500'>★</span>
           <span className='font-semibold'>{product.rating}</span>
