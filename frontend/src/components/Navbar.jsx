@@ -53,14 +53,14 @@ const Navbar = () => {
   }, []);
 
   const navItems = [
-    { name: 'NEW ARRIVALS', link: '#' },
-    { name: 'MEN', link: '#' },
-    { name: 'SALE', link: '#' },
-    { name: 'COLLECTIONS', link: '#' },
+    { name: 'NEW ARRIVALS', link: '/' },
+    { name: 'MEN', link: '/' },
+    { name: 'SALE', link: '/' },
+    { name: 'COLLECTIONS', link: '/' },
   ];
 
   return (
-    <nav className='bg-white shadow-md font-sans'>
+    <nav className='bg-orange-50 shadow-md font-sans'>
       <div className='container mx-auto flex justify-between items-center py-4 px-6'>
         {/* Logo */}
         <Link to='/' className='text-2xl font-bold tracking-wider'>
