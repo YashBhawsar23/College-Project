@@ -234,8 +234,7 @@ const AuthScreen = () => {
     <div
       className='relative flex min-h-screen flex-col items-center justify-center px-4'
       style={{
-        backgroundImage:
-          "url('https://images.freeimages.com/image/previews/0e1/floral-flourish-frame-5690069.jpg?fmt=webp&h=350')", // Change this path
+        backgroundImage: "url('/images/Background.webp')", // Change this path
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
