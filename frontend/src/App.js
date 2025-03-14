@@ -7,6 +7,7 @@ import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Footer from './components/FooterContent';
 import Navbar from './components/Navbar';
+import ScrollToTop from './components/ScrollToTop';
 
 const App = () => {
   const dispatch = useDispatch();
@@ -25,6 +26,7 @@ const App = () => {
     <div className='min-h-screen flex flex-col w-full'>
       <ToastContainer />
       <Navbar />
+      <ScrollToTop />
       {/* <Header /> */}
       <main className='flex-grow w-full'>
         <Outlet />
