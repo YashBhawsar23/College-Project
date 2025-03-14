@@ -54,7 +54,7 @@ const Navbar = () => {
 
   const navItems = [
     { name: 'NEW ARRIVALS', link: '/' },
-    { name: 'MEN', link: '/' },
+    // { name: 'MEN', link: '/' },
     { name: 'SALE', link: '/' },
     { name: 'COLLECTIONS', link: '/' },
   ];
