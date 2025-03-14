@@ -270,9 +270,9 @@ const CartScreen = () => {
                       Apply
                     </button>
                   </div>
-                  <div className='text-xs text-gray-500 mt-2'>
+                  {/* <div className='text-xs text-gray-500 mt-2'>
                     Try "SAVE10" for 10% off or "FREESHIP" for free shipping
-                  </div>
+                  </div> */}
                 </div>
 
                 <button

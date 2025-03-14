@@ -18,7 +18,7 @@ const PrivateRoute = () => {
     return <Loader />; // Show loader while checking auth state
   }
 
-  return userInfo ? <Outlet /> : <Navigate to='/login' replace />;
+  return userInfo ? <Outlet /> : <Navigate to='/auth' replace />;
 };
 
 export default PrivateRoute;
