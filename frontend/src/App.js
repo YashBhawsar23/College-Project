@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { Outlet } from 'react-router-dom';
-import Header from './components/Header';
+// import Header from './components/Header';
 import { logout } from './slices/authSlice';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -25,7 +25,7 @@ const App = () => {
     <div className='min-h-screen flex flex-col w-full'>
       <ToastContainer />
       <Navbar />
-      <Header />
+      {/* <Header /> */}
       <main className='flex-grow w-full'>
         <Outlet />
       </main>
