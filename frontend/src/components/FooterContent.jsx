@@ -303,20 +303,23 @@ const Footer = () => {
         </div>
 
         {/* Footer Bottom */}
-        <div className="mt-10 pt-6 border-t border-gray-500 flex flex-col items-center text-sm text-black">
-  <span className="mb-2 text-center">
-    © 2025 SWAGGIN. All Rights Reserved.
-  </span>
-  <div className="flex space-x-6">
-    <a href="#" className="hover:text-gray-900">Terms</a>
-    <a href="#" className="hover:text-gray-900">Privacy</a>
-    <a href="#" className="hover:text-gray-900">Cookies</a>
-  </div>
-</div>
+        <div className="mt-10 pt-6 border-t border-gray-500 flex flex-col items-center text-sm text-black space-y-2">
+          <span>© 2025 SWAGGIN. All Rights Reserved.</span>
+          <div className="flex space-x-6">
+            <a href="#" className="hover:text-gray-900">
+              Terms
+            </a>
+            <a href="#" className="hover:text-gray-900">
+              Privacy
+            </a>
+            <a href="#" className="hover:text-gray-900">
+              Cookies
+            </a>
+          </div>
+        </div>
       </div>
     </footer>
   );
 };
 
 export default Footer;
-
